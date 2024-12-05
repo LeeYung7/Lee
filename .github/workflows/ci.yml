@@ -35,4 +35,5 @@ jobs:
   
       - name: Notify team
         run: |
-          curl -X POST -H "Content-type: application/json" --data '{"text":"Deployment to staging successful!"}' ${{ secrets.SLACK_WEBHOOK_URL }}
+          WEBHOOK_URL="https://example.com/webhook"
+          curl -X POST -H "Content-type: application/json" --data '{"text":"Deployment to staging successful!"}' $WEBHOOK_URL
